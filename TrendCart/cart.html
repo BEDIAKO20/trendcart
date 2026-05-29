@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review your TrendCart shopping cart. Adjust quantities, remove items and proceed to checkout." />
+    <title>TrendCart Fashion Store | Shopping Cart</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- ============================ HEADER ============================ -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo">Trend<span>Cart</span></a>
+            <form class="search-box" role="search" aria-label="Site search">
+                <input type="search" placeholder="Search products..." aria-label="Search products" />
+                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link active" aria-label="View cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- ===================== PAGE BANNER ===================== -->
+        <section class="page-banner">
+            <h1>Your Shopping Cart</h1>
+            <p class="breadcrumb"><a href="index.html">Home</a> / Cart</p>
+        </section>
+
+        <!-- ===================== CART ===================== -->
+        <section class="section">
+            <div class="container">
+                <div class="cart-layout">
+                    <!-- Cart items list -->
+                    <div class="cart-items">
+                        <!-- Item 1 -->
+                        <article class="cart-item" data-price="89.00">
+                            <img src="images/sneakers.jpg" alt="Urban Street Sneakers" />
+                            <div class="cart-item-details">
+                                <h3>Urban Street Sneakers</h3>
+                                <p class="product-category">Shoes</p>
+                                <p class="price">$89.00</p>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-decrease" aria-label="Decrease quantity">&minus;</button>
+                                    <span class="qty-value">1</span>
+                                    <button class="qty-increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <span class="line-total">$89.00</span>
+                                <button class="remove-item"><i class="fa-solid fa-trash"></i> Remove</button>
+                            </div>
+                        </article>
+
+                        <!-- Item 2 -->
+                        <article class="cart-item" data-price="64.00">
+                            <img src="images/hoodie.jpg" alt="Premium Fleece Hoodie" />
+                            <div class="cart-item-details">
+                                <h3>Premium Fleece Hoodie</h3>
+                                <p class="product-category">Hoodies</p>
+                                <p class="price">$64.00</p>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-decrease" aria-label="Decrease quantity">&minus;</button>
+                                    <span class="qty-value">2</span>
+                                    <button class="qty-increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <span class="line-total">$128.00</span>
+                                <button class="remove-item"><i class="fa-solid fa-trash"></i> Remove</button>
+                            </div>
+                        </article>
+
+                        <!-- Item 3 -->
+                        <article class="cart-item" data-price="149.00">
+                            <img src="images/watch.jpg" alt="Classic Leather Watch" />
+                            <div class="cart-item-details">
+                                <h3>Classic Leather Watch</h3>
+                                <p class="product-category">Watches</p>
+                                <p class="price">$149.00</p>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-decrease" aria-label="Decrease quantity">&minus;</button>
+                                    <span class="qty-value">1</span>
+                                    <button class="qty-increase" aria-label="Increase quantity">+</button>
+                                </div>
+                                <span class="line-total">$149.00</span>
+                                <button class="remove-item"><i class="fa-solid fa-trash"></i> Remove</button>
+                            </div>
+                        </article>
+
+                        <!-- Empty cart message (shown by JS when no items remain) -->
+                        <div class="empty-cart" id="emptyCart" style="display:none;">
+                            <i class="fa-solid fa-bag-shopping" style="font-size:2.5rem; color:var(--color-accent); margin-bottom:14px;"></i>
+                            <h3>Your cart is empty</h3>
+                            <p style="margin:10px 0 20px;">Looks like you haven't added anything yet.</p>
+                            <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+                        </div>
+                    </div>
+
+                    <!-- Order summary -->
+                    <aside class="cart-summary" id="cartSummary">
+                        <h2>Order Summary</h2>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="summarySubtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="summaryShipping">$0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="summaryTotal">$0.00</span>
+                        </div>
+                        <button class="btn btn-accent btn-block">Proceed to Checkout</button>
+                        <a href="products.html" class="btn btn-outline btn-block" style="margin-top:12px;">Continue Shopping</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">Trend<span>Cart</span></a>
+                    <p>Premium fashion essentials for the modern lifestyle. Quality you can feel, style you can flaunt.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">Shoes</a></li>
+                        <li><a href="products.html">Hoodies</a></li>
+                        <li><a href="products.html">Watches</a></li>
+                        <li><a href="products.html">Bags</a></li>
+                        <li><a href="products.html">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Get 10% off your first order.</p>
+                    <form class="js-form">
+                        <label for="footerEmail" class="skip-link">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Your email" required />
+                        <button type="submit" class="btn btn-accent btn-block">Subscribe</button>
+                        <p class="form-note"><i class="fa-solid fa-circle-check"></i> Subscribed!</p>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TrendCart Fashion Store. Built for an E-Business Architecture assignment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span class="toast-msg"></span>
+    </div>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

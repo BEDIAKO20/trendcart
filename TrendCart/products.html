@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse the full TrendCart collection - shoes, hoodies, watches, bags and t-shirts. Search and filter to find your style." />
+    <title>TrendCart Fashion Store | Shop</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- ============================ HEADER ============================ -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo">Trend<span>Cart</span></a>
+            <form class="search-box" role="search" aria-label="Site search">
+                <input type="search" placeholder="Search products..." aria-label="Search products" />
+                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link" aria-label="View cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- ===================== PAGE BANNER ===================== -->
+        <section class="page-banner">
+            <h1>Our Collection</h1>
+            <p class="breadcrumb"><a href="index.html">Home</a> / Shop</p>
+        </section>
+
+        <!-- ===================== PRODUCTS ===================== -->
+        <section class="section">
+            <div class="container">
+
+                <!-- Search & category filter bar -->
+                <div class="filter-bar">
+                    <div class="filter-search">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <label for="productSearch" class="skip-link">Search products</label>
+                        <input type="search" id="productSearch" placeholder="Search products by name..." />
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="shoes">Shoes</button>
+                        <button class="filter-btn" data-filter="hoodies">Hoodies</button>
+                        <button class="filter-btn" data-filter="watches">Watches</button>
+                        <button class="filter-btn" data-filter="bags">Bags</button>
+                        <button class="filter-btn" data-filter="tshirts">T-Shirts</button>
+                    </div>
+                </div>
+
+                <!-- Product grid (10 products) -->
+                <div class="product-grid">
+                    <!-- 1 -->
+                    <article class="product-card" data-name="Urban Street Sneakers" data-category="shoes">
+                        <div class="product-image">
+                            <span class="product-badge">New</span>
+                            <img src="images/sneakers.jpg" alt="White urban street sneakers" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Shoes</span>
+                            <h3 class="product-name">Urban Street Sneakers</h3>
+                            <p class="product-price">$89.00 <span class="old-price">$120.00</span></p>
+                            <button class="btn btn-primary add-to-cart" data-name="Urban Street Sneakers">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 2 -->
+                    <article class="product-card" data-name="Premium Fleece Hoodie" data-category="hoodies">
+                        <div class="product-image">
+                            <span class="product-badge">Hot</span>
+                            <img src="images/hoodie.jpg" alt="Grey premium fleece hoodie" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Hoodies</span>
+                            <h3 class="product-name">Premium Fleece Hoodie</h3>
+                            <p class="product-price">$64.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Premium Fleece Hoodie">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 3 -->
+                    <article class="product-card" data-name="Classic Leather Watch" data-category="watches">
+                        <div class="product-image">
+                            <img src="images/watch.jpg" alt="Classic analog leather watch" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Watches</span>
+                            <h3 class="product-name">Classic Leather Watch</h3>
+                            <p class="product-price">$149.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Classic Leather Watch">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 4 -->
+                    <article class="product-card" data-name="Leather Tote Bag" data-category="bags">
+                        <div class="product-image">
+                            <span class="product-badge">Sale</span>
+                            <img src="images/tote-bag.jpg" alt="Brown leather tote bag" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Bags</span>
+                            <h3 class="product-name">Leather Tote Bag</h3>
+                            <p class="product-price">$110.00 <span class="old-price">$160.00</span></p>
+                            <button class="btn btn-primary add-to-cart" data-name="Leather Tote Bag">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 5 -->
+                    <article class="product-card" data-name="Essential Cotton T-Shirt" data-category="tshirts">
+                        <div class="product-image">
+                            <img src="images/tshirt.jpg" alt="Plain white cotton t-shirt" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">T-Shirts</span>
+                            <h3 class="product-name">Essential Cotton T-Shirt</h3>
+                            <p class="product-price">$29.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Essential Cotton T-Shirt">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 6 -->
+                    <article class="product-card" data-name="Running Performance Shoes" data-category="shoes">
+                        <div class="product-image">
+                            <span class="product-badge">New</span>
+                            <img src="images/running-shoes.jpg" alt="Black running performance shoes" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Shoes</span>
+                            <h3 class="product-name">Running Performance Shoes</h3>
+                            <p class="product-price">$95.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Running Performance Shoes">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 7 -->
+                    <article class="product-card" data-name="Minimalist Smart Watch" data-category="watches">
+                        <div class="product-image">
+                            <span class="product-badge">Hot</span>
+                            <img src="images/smartwatch.jpg" alt="Minimalist smart watch" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Watches</span>
+                            <h3 class="product-name">Minimalist Smart Watch</h3>
+                            <p class="product-price">$199.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Minimalist Smart Watch">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 8 -->
+                    <article class="product-card" data-name="Canvas Backpack" data-category="bags">
+                        <div class="product-image">
+                            <img src="images/backpack.jpg" alt="Canvas travel backpack" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Bags</span>
+                            <h3 class="product-name">Canvas Backpack</h3>
+                            <p class="product-price">$74.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Canvas Backpack">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 9 -->
+                    <article class="product-card" data-name="Oversized Graphic Hoodie" data-category="hoodies">
+                        <div class="product-image">
+                            <span class="product-badge">Sale</span>
+                            <img src="images/graphic-hoodie.jpg" alt="Oversized graphic hoodie" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Hoodies</span>
+                            <h3 class="product-name">Oversized Graphic Hoodie</h3>
+                            <p class="product-price">$58.00 <span class="old-price">$80.00</span></p>
+                            <button class="btn btn-primary add-to-cart" data-name="Oversized Graphic Hoodie">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 10 -->
+                    <article class="product-card" data-name="Striped Graphic Tee" data-category="tshirts">
+                        <div class="product-image">
+                            <img src="images/graphic-tee.jpg" alt="Striped graphic t-shirt" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">T-Shirts</span>
+                            <h3 class="product-name">Striped Graphic Tee</h3>
+                            <p class="product-price">$34.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Striped Graphic Tee">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 11 -->
+                    <article class="product-card" data-name="Suede Chelsea Boots" data-category="shoes">
+                        <div class="product-image">
+                            <img src="images/boots.jpg" alt="Brown suede chelsea boots" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Shoes</span>
+                            <h3 class="product-name">Suede Chelsea Boots</h3>
+                            <p class="product-price">$129.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Suede Chelsea Boots">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- 12 -->
+                    <article class="product-card" data-name="Crossbody Sling Bag" data-category="bags">
+                        <div class="product-image">
+                            <span class="product-badge">New</span>
+                            <img src="images/sling-bag.jpg" alt="Black crossbody sling bag" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Bags</span>
+                            <h3 class="product-name">Crossbody Sling Bag</h3>
+                            <p class="product-price">$49.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Crossbody Sling Bag">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- No results message (shown by JS) -->
+                    <p class="no-results" id="noResults" style="display:none;">
+                        No products match your search. Try a different keyword or category.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">Trend<span>Cart</span></a>
+                    <p>Premium fashion essentials for the modern lifestyle. Quality you can feel, style you can flaunt.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">Shoes</a></li>
+                        <li><a href="products.html">Hoodies</a></li>
+                        <li><a href="products.html">Watches</a></li>
+                        <li><a href="products.html">Bags</a></li>
+                        <li><a href="products.html">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Get 10% off your first order.</p>
+                    <form class="js-form">
+                        <label for="footerEmail" class="skip-link">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Your email" required />
+                        <button type="submit" class="btn btn-accent btn-block">Subscribe</button>
+                        <p class="form-note"><i class="fa-solid fa-circle-check"></i> Subscribed!</p>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TrendCart Fashion Store. Built for an E-Business Architecture assignment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span class="toast-msg"></span>
+    </div>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TrendCart Fashion Store - shop modern shoes, hoodies, watches, bags and t-shirts. Luxury style for everyone." />
+    <title>TrendCart Fashion Store | Home</title>
+
+    <!-- External stylesheet (single CSS file used on every page) -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts: Playfair Display (headings) + Poppins (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <!-- Accessibility: skip straight to main content -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- ============================ HEADER ============================ -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="logo">Trend<span>Cart</span></a>
+
+            <!-- Search bar -->
+            <form class="search-box" role="search" aria-label="Site search">
+                <input type="search" placeholder="Search products..." aria-label="Search products" />
+                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <!-- Primary navigation menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link" aria-label="View cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- ============================ HERO ============================ -->
+        <section class="hero">
+            <!-- Autoplay, muted, looping background video -->
+            <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+                <source src="videos/fashion.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="hero-content">
+                <h1>Wear The Trend. Own The Style.</h1>
+                <p>Discover premium shoes, hoodies, watches, bags and tees curated for the modern wardrobe.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-accent">Shop Collection</a>
+                    <a href="about.html" class="btn btn-outline">Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= CATEGORIES ======================= -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Shop By Category</h2>
+                <p class="section-subtitle">Everything you need to complete your look, all in one place.</p>
+
+                <div class="categories-grid">
+                    <a href="products.html" class="category-card">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                        <h3>Shoes</h3>
+                    </a>
+                    <a href="products.html" class="category-card">
+                        <i class="fa-solid fa-shirt"></i>
+                        <h3>Hoodies</h3>
+                    </a>
+                    <a href="products.html" class="category-card">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>Watches</h3>
+                    </a>
+                    <a href="products.html" class="category-card">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <h3>Bags</h3>
+                    </a>
+                    <a href="products.html" class="category-card">
+                        <i class="fa-solid fa-tshirt"></i>
+                        <h3>T-Shirts</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FEATURED PRODUCTS ===================== -->
+        <section class="section" style="padding-top:0;">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Hand-picked favourites loved by our community.</p>
+
+                <div class="product-grid">
+                    <!-- Product card 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge">New</span>
+                            <img src="images/sneakers.jpg" alt="White leather sneakers on a plain background" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Shoes</span>
+                            <h3 class="product-name">Urban Street Sneakers</h3>
+                            <p class="product-price">$89.00 <span class="old-price">$120.00</span></p>
+                            <button class="btn btn-primary add-to-cart" data-name="Urban Street Sneakers">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product card 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge">Hot</span>
+                            <img src="images/hoodie.jpg" alt="Grey premium pullover hoodie" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Hoodies</span>
+                            <h3 class="product-name">Premium Fleece Hoodie</h3>
+                            <p class="product-price">$64.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Premium Fleece Hoodie">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product card 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="images/watch.jpg" alt="Classic analog wristwatch with leather strap" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Watches</span>
+                            <h3 class="product-name">Classic Leather Watch</h3>
+                            <p class="product-price">$149.00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Classic Leather Watch">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product card 4 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge">Sale</span>
+                            <img src="images/tote-bag.jpg" alt="Brown leather tote handbag" />
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Bags</span>
+                            <h3 class="product-name">Leather Tote Bag</h3>
+                            <p class="product-price">$110.00 <span class="old-price">$160.00</span></p>
+                            <button class="btn btn-primary add-to-cart" data-name="Leather Tote Bag">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align:center; margin-top:40px;">
+                    <a href="products.html" class="btn btn-outline">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================== PROMO BANNER ====================== -->
+        <section class="section" style="padding-top:0;">
+            <div class="container">
+                <div class="promo-banner">
+                    <h2>Summer Sale — Up To <span>50% Off</span></h2>
+                    <p>Refresh your wardrobe with the season's hottest looks. Limited time only.</p>
+                    <a href="products.html" class="btn btn-accent">Grab The Deals</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROMO AUDIO ===================== -->
+        <section class="section" style="padding-top:0;">
+            <div class="container">
+                <h2 class="section-title">Listen To Our Promo</h2>
+                <p class="section-subtitle">Hit play for this season's audio announcement.</p>
+                <div class="audio-section">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <span>TrendCart Summer Promo</span>
+                    <!-- Promotional audio player -->
+                    <audio controls>
+                        <source src="audio/promo.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SOCIAL FEED ===================== -->
+        <section class="section" style="padding-top:0;">
+            <div class="container">
+                <h2 class="section-title">Follow Us On Instagram</h2>
+                <p class="section-subtitle">@trendcart — tag us to be featured.</p>
+
+                <div class="social-feed-grid">
+                    <div class="feed-item"><img src="images/feed1.jpg" alt="Customer wearing TrendCart outfit" /></div>
+                    <div class="feed-item"><img src="images/feed2.jpg" alt="Street style fashion photo" /></div>
+                    <div class="feed-item"><img src="images/feed3.jpg" alt="Model showcasing accessories" /></div>
+                    <div class="feed-item"><img src="images/feed4.jpg" alt="Flat lay of fashion items" /></div>
+                </div>
+
+                <!-- Embedded social newsfeed placeholder -->
+                <div class="social-embed">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>Embedded social media newsfeed placeholder — live Instagram &amp; X feed would appear here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== NEWSLETTER ===================== -->
+        <section class="section newsletter">
+            <div class="container">
+                <div class="newsletter-inner">
+                    <h2 class="section-title">Join The TrendCart Club</h2>
+                    <p class="section-subtitle">Subscribe for early access to drops, exclusive offers and style tips.</p>
+                    <form class="newsletter-form js-form">
+                        <label for="newsletterEmail" class="skip-link">Email address</label>
+                        <input type="email" id="newsletterEmail" placeholder="Enter your email address" required />
+                        <button type="submit" class="btn btn-accent">Subscribe</button>
+                        <p class="form-note"><i class="fa-solid fa-circle-check"></i> Thanks for subscribing!</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">Trend<span>Cart</span></a>
+                    <p>Premium fashion essentials for the modern lifestyle. Quality you can feel, style you can flaunt.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">Shoes</a></li>
+                        <li><a href="products.html">Hoodies</a></li>
+                        <li><a href="products.html">Watches</a></li>
+                        <li><a href="products.html">Bags</a></li>
+                        <li><a href="products.html">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Get 10% off your first order.</p>
+                    <form class="js-form">
+                        <label for="footerEmail" class="skip-link">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Your email" required />
+                        <button type="submit" class="btn btn-accent btn-block">Subscribe</button>
+                        <p class="form-note"><i class="fa-solid fa-circle-check"></i> Subscribed!</p>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TrendCart Fashion Store. Built for an E-Business Architecture assignment. Designed with <a href="#">passion</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast notification for add-to-cart feedback -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span class="toast-msg"></span>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="js/search.js"></script>
+</body>
+</html>
