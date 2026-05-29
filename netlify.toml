@@ -1,0 +1,7 @@
+# Netlify configuration for TrendCart Fashion Store
+# The website files live inside the TrendCart/ subfolder, so we tell
+# Netlify to publish that folder as the site root. This makes
+# TrendCart/index.html the homepage and fixes the "Page not found" 404.
+
+[build]
+  publish = "TrendCart"
